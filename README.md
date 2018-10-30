@@ -4,7 +4,9 @@ unittest 框架中文文档，起因是看到官方文档有English、French、J
 
 本文：尊重原创，严格对重官方文档，翻译遵循信达雅。 
 
-Python版本：3.7.1 [（官方英文文档）](https://docs.python.org/3/library/unittest.html#test-discovery)
+Python版本：3.7.1
+
+[unittest官方英文文档](https://docs.python.org/3/library/unittest.html#test-discovery)
 ***
 
 # unnitest--单元测试框架
