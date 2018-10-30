@@ -42,7 +42,19 @@ unittest 单元框架最初的灵感来自于JUnit，它和其他语言中的单
 
 ```
 请参阅：
-doctest模块(https://docs.python.org/3/library/doctest.html#module-doctest)：另外一种具有独特韵味的测试支持模块。
+doctest模块(https://docs.python.org/3/library/doctest.html#module-doctest)：
+  另外一种具有独特韵味的测试支持模块。
+
+Simple Smalltalk Testing: With Patterns（https://web.archive.org/web/20150315073817/http://www.xprogramming.com/testfram.htm）
+  Kent Beck 的原论文，运用模式在测试框架上，被unittest共享。
+
+Nose and py.test
+  使用轻量级的语法来编写测试用例的第三方单元测试框架。
+  例如：assert func(10) == 42
+
+The Python Testing Tools Taxonomy（https://wiki.python.org/moin/PythonTestingToolsTaxonomy）
+  一张巨大的Python测试工具列表，包括功能测试框架以及模拟对象库。
+
 ```
 
 
