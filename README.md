@@ -55,6 +55,9 @@ Nose and py.test
 The Python Testing Tools Taxonomy（https://wiki.python.org/moin/PythonTestingToolsTaxonomy）
   一张巨大的Python测试工具列表，包括功能测试框架以及模拟对象库。
 
+Python源代码 Tools/unittestgui/unittestgui.py 中的脚本是一个图像界面工具，用于测试调试和执行。这很大程度上是为了方便新手用户写测试用例。
+对于生产环境，建议测试用例运行在持续集成系统，例如 Jenkins、Buidlbot、Hudson。
+
 ```
 
 
