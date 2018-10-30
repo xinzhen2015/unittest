@@ -60,47 +60,4 @@ Python源代码 Tools/unittestgui/unittestgui.py 中的脚本是一个图像界�
 
 ```
 
-## 基本例子
 
-unittest模块为用户构建和执行测试用例提供了一组丰富的工具。本节演示一小部分工具，足以满足大部分用户的需求。
-
-以下简短的脚本，用于测试字符串的三个方法：
-
-```python
-import unittest
-
-class TestStringMethods(unittest.TestCase):
-
-    def test_upper(self):
-        self.assertEqual('foo'.upper(), 'FOO')
-
-    def test_isupper(self):
-        self.assertTrue('FOO'.isupper())
-        self.assertFalse('Foo'.isupper())
-
-    def test_split(self):
-        s = 'hello world'
-        self.assertEqual(s.split(), ['hello', 'world'])
-        # check that s.split fails when the separator is not a string
-        with self.assertRaises(TypeError):
-            s.split(2)
-
-if __name__ == '__main__':
-    unittest.main()
-
-```
-testcase是通过子类化unittesttest.testcase创建的。上面代码中的三个独立测试用例，用例名字分别都是以test开头定义的，这样的命名方式告诉运行器哪些方法表示测试。
-
-每次测试的关键是调用assertEqual()去校验预期结果；调用assertTrue()和assertFalse()验证条件是否成立；或者是调用assertRaises()验证是否引发特定异常。以上这些方法被用来替代assert语句，因此运行器可以收集所有的结果并生成报告。
-
-setUp()和tearDown()方法允许您定义将在每个测试方法前后执行的指令。在[组织测试代码的部分](https://docs.python.org/3/library/unittest.html#organizing-tests)中会更详细地介绍它们。
-
-最后一块展示了一个简单的方法去运行测试用例。unittest.main()提供了测试脚本的命令行界面。从命令行运行时，上面的脚本产生如下输出:
-
-```python
-...
-----------------------------------------------------------------------
-Ran 3 tests in 0.000s
-
-OK
-```
