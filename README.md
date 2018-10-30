@@ -60,4 +60,33 @@ Python源代码 Tools/unittestgui/unittestgui.py 中的脚本是一个图像界�
 
 ```
 
+## 基本例子
+
+unittest模块为用户构建和执行测试用例提供了一组丰富的工具。本节演示一小部分工具，足以满足大部分用户的需求。
+
+以下简短的脚本，用于测试字符串的三个方法：
+
+```python
+import unittest
+
+class TestStringMethods(unittest.TestCase):
+
+    def test_upper(self):
+        self.assertEqual('foo'.upper(), 'FOO')
+
+    def test_isupper(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_split(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+if __name__ == '__main__':
+    unittest.main()
+
+```
 
