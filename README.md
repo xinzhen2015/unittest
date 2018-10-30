@@ -91,3 +91,4 @@ if __name__ == '__main__':
 ```
 testcase是通过子类化unittesttest.testcase创建的。上面代码中的三个独立测试用例，用例名字分别都是以test开头定义的，这样的命名方式告诉运行器哪些方法表示测试。
 
+每次测试的关键是调用assertEqual()去校验预期结果；调用assertTrue()和assertFalse()验证条件是否成立；或者是调用assertRaises()验证是否引发特定异常。以上这些方法被用来替代assert语句，因此运行器可以收集所有的结果并生成报告。
