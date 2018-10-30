@@ -89,4 +89,5 @@ if __name__ == '__main__':
     unittest.main()
 
 ```
+testcase是通过子类化unittesttest.testcase创建的。上面代码中的三个独立测试用例，用例名字分别都是以test开头定义的，这样的命名方式告诉运行器哪些方法表示测试。
 
